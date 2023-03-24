@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0px;
+        margin: 0px;}
+        
+        .footer{
+            width: 1450px;
+            background-color: #D3D3D3;
+            display: flex;
+            position: fixed;
+        }
+        .footer-2{
+            width: 750px;
+            
+        }
+        .footer-2 ul{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            list-style: "|";
+            padding-left: 120px;
+            padding-top: 10px;
+        }
+        .footer-2 li{
+            padding: 0px 10px;
+        }
+        .footer_li{
+            list-style: none;
+        }
+        .footer-2 a{
+            text-decoration: none;
+            font-size: small;
+            color: black;
+            
+        }
+
+        .header{
+            width: 1200px;
+            margin: auto;
+            display: flex;
+        }
+        .header1-1,.header1-3{
+            width: 390px;
+            margin:40px 5px  0px  5px;
+        }
+        .header1-2{
+            width: 390px;
+            margin: 5px;
+            margin:60px 5px  0px  5px;
+        }
+        .header1-1 img{
+            width: 290px;
+            padding:10px 0px 0px 10px
+        }
+        .abc{
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-color: #696969;
+            width: 300px;
+            height: 25px;
+            border-right: none;
+        }
+        .header1-2-top{
+            display: flex;
+            justify-content: center;
+        }
+        .header1-2-bottom ul{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        .header1-2-bottom li{
+            padding: 0px 10px;
+            list-style: "|";
+            color: pink;
+            font-size: 8px;
+        }
+        .header1-2li{
+            list-style: none;
+            font-size: 15px;
+        }
+        .header1-2-bottom a {
+            font-size: 8px;
+            text-decoration: none;
+            color: pink;
+        }
+        .header1-3{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 60px;
+        }
+        .header1-3 img{
+            width: 30%;
+            background-color: bisque;
+        }
+
+        .header2{
+            width: 1200px;
+            margin: auto;
+            display: flex;
+        }
+        .header2-box{
+            width: 580px;
+            margin-top: 20px;
+        }
+        .header2 p{
+            color: white;
+            background-color: #696969;
+            width: 150px;
+            text-align: center;
+            margin-left: 25px;
+        }
+        .header2 ul{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .header2 li{
+            list-style: none;
+            padding: 0px 10px;
+            font-size: 14px;
+        }
+        .header2 a{
+            text-decoration: none;
+            background-color: orange;
+            color: white;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 3px;
+        }
+        .header3{
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .header3_left{
+            width: 200px;
+        }
+        .header3list{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            border-bottom: 2px double white;
+            background-color: #aaa;
+            color: white;
+        }
+        .header3_left ul,.header4_left ul {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        .header3_left li{
+            padding: 10px;
+            list-style: none;
+            font-size: x-small;
+            line-height: 21px;
+        }
+        .header3_middle{
+            width: 700px;
+        }
+        .header3_middle img{
+            width: 100%;
+        }
+        .header3_right{
+            width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .header3_top{
+            background-color: #aaa;
+        }
+        .header3_top h2{
+            font-size: medium;
+        }
+        .header3_box{
+            display: flex;
+            flex-direction: row;
+            border-bottom: 5px solid #aaa;
+        }
+        .header3_text ,.header3_pic{
+            width: 150px;
+        }
+        .header3_pic img{
+            width: 100%;
+        }
+        .header3_text h2,h3  {
+            font-size: 16px;
+        }
+        .header3_text p{
+            font-size: 18px;
+            font-weight: 800;
+            color: pink;
+        }
+
+        .header4{
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+        }
+        .header4_left{
+            width: 200px;
+            background-color: #aaa;
+        }
+        .header4_left li{
+            list-style: none;
+            font-size: x-small;
+            padding: 10px;
+            color: white;
+        }
+        .header4_right{
+            width: 1000px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .header4_box{
+            display: flex;
+            flex-direction: column;
+            width: 236px;
+            background-color: whitesmoke;
+            border: 2px solid #aaa ;
+
+        }
+        .header4_top{
+            background-color: pink;
+        }
+        .header4_bottom{
+            display: flex;
+            flex-direction: row;
+
+        }
+        .header4_text{
+            width: 120px;
+        }
+        .header4_pic{
+            width: 120px;
+        }
+        .header4_pic img{
+            width: 80%;
+        }
+
+        .header5{
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+        }
+        .header5_left,.header5_right{
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 5px;
+        }
+        .header5_middle{
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+        .header5_top2 ,.header5_bottom2{
+            display: flex;
+            flex-direction: column;
+        }
+        .header5_top ,.header5_bottom{
+            display: flex;
+            flex-direction: row;
+            width: 200px;
+        }
+        .header5 img{
+            width: 100%;
+        }
+        .header6{
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+        }
+        .header6_left,.header6_right{
+            width: 400px;
+        }
+        .header6 img{
+            width: 100%;
+        }
+        .header7{
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .header7_top,.header7_bottom{
+            display: flex;
+            flex-direction: row;
+        }
+        .header7 img{
+            width: 200px;
+        }
+        .header8{
+            width: 1200px;
+            margin: auto;
+            height: 600px;
+            display: flex;
+        }
+        .header8-left{
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header8-top{
+            height: 40px;
+            background-color: yellow;
+        }
+        .header8-bottom{
+            width: 600px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: #aaa;
+        }
+        .header8-box{
+            width: 180px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        .header8-text p{
+            color: pink;
+            font-weight: 1000;
+        }
+        .header8-pic img{
+            width: 80%;
+        }
+        .header8-right{
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+        }
+        .header8-righttop{
+            display: flex;
+            flex-direction: column;
+        }
+        .header8-top1{
+            height: 40px;
+            background-color: antiquewhite;
+
+        }
+        .header8-bottom1{
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            background-color: pink;
+        }
+        .item{
+            width: 300px;
+            display: flex;
+            flex-direction: row;
+        }
+        .item img{
+            width: 90%;
+        }
+        .header8-rightbottom{
+            width: 600px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+        .header8-top3{
+            height: 30px;
+            background-color: antiquewhite;
+        }
+        .header8-bottom3{
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+        }
+        .header8-bottom3 img{
+            width: 116px;
+        }
+    </style>
+</head>
+<body>
+    <div class="footer">
+        <div class="footer-2">
+            <ul>
+                <li class="footer_li"><a href="">回首頁</a></li>
+                <li class="footer_li"><a href="">momo富立保險</a></li>
+                <li><a href="">app下載</a></li>
+                <li><a href="">點點賺</a></li>
+                <li><a href="">直配大陸</a></li>
+                <li><a href="">書店</a></li>
+            </ul>
+        </div>
+        <div class="footer-2">
+            <ul>
+                <li><a href="">登入</a></li>
+                <li><a href="">註冊</a></li>
+                <li><a href="">會員中心</a></li>
+                <li><a href="">查訂單</a></li>
+                <li><a href="">追蹤清單</a></li>
+                <li><a href="">折價卷</a></li>
+                <li><a href="">購物車</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header">
+        <div class="header1-1">
+            <img src="https://img3.momoshop.com.tw/ecm/img/online/10/998/00/000/bt_0_243_01/bt_0_243_01_e2.gif?t=1677072052639" alt="">
+        </div>
+        <div class="header1-2">
+            <div class="header1-2-top">
+                <input type="text" class="abc">
+                <input type="button" value="搜尋" style="width: 80px;height:30px;border-bottom-right-radius: 10px; border-top-right-radius: 10px;border-color: #696969;">
+            </div>
+            <div class="header1-2-bottom">
+                <ul>
+                    <li>熱門</li>
+                    <li class="header1-2li"><a href="">行李箱</a></li>
+                    <li><a href="">衛生紙 </a></li>
+                    <li><a href="">麥當勞</a></li>
+                    <li><a href="">除濕機</a></li>
+                    <li><a href="">口罩</a></li>
+                    <li><a href="">無印良品</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header1-3">
+            <img src="https://img4.momoshop.com.tw/ecm/img/online/10/998/00/000/bt_0_245_01/bt_0_245_01_P1_1_e2.png?t=1677600013828" alt="">
+            <img src="https://img4.momoshop.com.tw/ecm/img/online/10/998/00/000/bt_0_245_01/bt_0_245_01_P1_2_e2.png?t=1677600013828" alt="">
+            <img src="https://img1.momoshop.com.tw/ecm/img/online/10/998/00/000/bt_0_245_01/bt_0_245_01_P1_3_e2.png?t=1677945605468" alt="">
+        </div>
+    </div>
+    <div class="header2">
+        <div class="header2-box">
+        <p>全站商品分類</p>
+        </div>
+        <div class="header2-box">
+            <ul>
+                <li><a href="">樂公益</a></li>
+                <li><a href="">保險館</a></li>
+                <li><a href="">超市快配</a></li>
+                <li><a href="">省錢達人</a></li>
+                <li><a href="">看看買</a></li>
+                <li><a href="">週期訂購</a></li>
+                <li><a href="">品牌旗艦</a></li>
+                <li><a href="">綠色生活</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header3">
+        <div class="header3_left">
+            <div class="header3list">
+                <ul>
+                    <li>家電</li>
+                    <li>電玩</li>
+                    <li>視聽</li>
+                    <li>廚三機</li>
+                </ul>
+                <ul>
+                    <li>手機</li>
+                    <li>平板</li>
+                    <li>耳機</li>
+                    <li>攝相機</li>
+                </ul>
+                <ul>
+                    <li>電腦</li>
+                    <li>電競</li>
+                    <li>周邊</li>
+                    <li>零組件</li>
+                </ul>
+            </div>
+            <div class="header3list">
+                <ul>
+                    <li>保健</li>
+                    <li>醫療用品</li>
+                    <li>保險套</li>
+                </ul>
+                <ul>
+                    <li>食品</li>
+                    <li>零食</li>
+                    <li>飲料</li>
+                    <li>生鮮</li>
+                </ul>
+            </div>
+            <div class="header3list">
+                <ul>
+                    <li>彩妝</li>
+                    <li>保養</li>
+                    <li>洗沐</li>
+                    <li>香氛</li>
+                </ul>
+                <ul>
+                    <li>服裝</li>
+                    <li>內衣褲</li>
+                    <li>襪子</li>
+                    <li>機能</li>
+                </ul>
+                <ul>
+                    <li>珠寶</li>
+                    <li>精品</li>
+                    <li>配飾</li>
+                    <li>鞋包箱</li>
+                </ul>
+            </div>
+            <div class="header3list">
+                <ul>
+                    <li>日用品</li>
+                    <li>清潔</li>
+                    <li>餐廚</li>
+                    <li>寵物</li>
+                </ul>
+                <ul>
+                    <li>母嬰</li>
+                    <li>童裝</li>
+                    <li>尿布</li>
+                    <li>玩具</li>
+                </ul>
+            </div>
+        </div>
+        <div class="header3_middle">
+            <img src="https://img2.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_247_01/bt_0_247_01_P1_5_e2.jpg?t=1678327512629" alt="">
+        </div>
+        <div class="header3_right">
+            <div class="header3_top">
+                <h2>今日秒殺</h2>
+            </div>
+            <div class="header3_box">
+                <div class="header3_text">
+                    <h2>adidas</h2>
+                    <h3>人氣百搭經典鞋免登記送5%</h3>
+                    <p>限時$1390</p>
+                </div>
+                <div class="header3_pic">
+                    <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_248_01/bt_0_248_01_P1_4_e2.jpg?t=1678291246653" alt="">
+                </div>
+            </div>
+            <div class="header3_box">
+                <div class="header3_text">
+                    <h2>萬國通路</h2>
+                    <h3>超夯登記箱mo卡最高10%回饋</h3>
+                    <p>剁手價$1980</p>
+                </div>
+                <div class="header3_pic">
+                    <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_248_01/bt_0_248_01_P1_1_e2.jpg?t=1678325259824" alt="">
+                </div>
+            </div>
+            <div class="header3_box">
+                <div class="header3_text">
+                    <h2>巴黎萊雅</h2>
+                    <h3>小蜜罐奢養組買2件體驗7件組</h3>
+                    <p>限時$1990</p>
+                </div>
+                <div class="header3_pic">
+                    <img src="https://img1.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_248_01/bt_0_248_01_P1_3_e2.jpg?t=1678248005790" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header4">
+        <div class="header4_left">
+            <div class="header4list">
+                <ul>
+                    <li>家具</li>
+                    <li>寢具</li>
+                    <li>嫁飾</li>
+                    <li>修繕</li>
+                </ul>
+                <ul>
+                    <li>運動</li>
+                    <li>按摩</li>
+                    <li>戶外</li>
+                    <li>車類</li>
+                </ul>
+            </div>
+            <div class="header4list">
+                <ul>
+                    <li>圖書</li>
+                    <li>文具</li>
+                    <li>影音</li>
+                    <li>樂器</li>
+                </ul>
+                <ul>
+                    <li>旅遊</li>
+                    <li>票卷</li>
+                    <li>加值</li>
+                    <li>軟體</li>
+                </ul>
+            </div>
+        </div>
+        <div class="header4_right">
+            <div class="header4_box">
+                <div class="header4_top">
+                    <h2>銀行優惠</h2>
+                </div>
+                <div class="header4_bottom">
+                    <div class="header4_text">
+                        <p>中國信託週四滿＄2000送120</p>
+                    </div>
+                </div>
+            </div>
+            <div class="header4_box">
+                <div class="header4_top">
+                    <h2>momo富邦卡</h2>
+                </div>
+                <div class="header4_bottom">
+                    <div class="header4_text">
+                        <p>筆筆回饋5%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="header4_box">
+                <div class="header4_top">
+                    <h2>影音購物</h2>
+                </div>
+                <div class="header4_bottom">
+                    <div class="header4_text">
+                        <p>千大品牌最高10%回饋</p>
+                    </div>
+                    <div class="hearder4_pic">
+                        <img src="https://img1.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_250_01/bt_0_250_01_e8.jpg?t=1668478868608" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="header4_box">
+                <div class="header4_top">
+                    <h2>電視購物</h2>
+                </div>
+                <div class="header4_bottom">
+                    <div class="hearder4_text">
+                        <p>pbf整合強行紫</p>
+                    </div>
+                    <div class="header4_pic">
+                        <img src="https://img1.momoshop.com.tw/goodsimg/0007/968/527/7968527_L.jpg?t=1676047084" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header5">
+        <div class="header5_left">
+            <div class="header5_top">
+                <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_01.jpg?t=1678163258609" alt="">
+                <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_02.jpg?t=1678163258621" alt="">
+            </div>
+            <div class="header5_bottom">
+                <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_03.jpg?t=1678163258632" alt="">
+                <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_04.jpg?t=1678163258642" alt="">
+            </div>
+        </div>
+        <div class="header5_middle">
+            <div class="header5_top2">
+                <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_05-1.jpg?t=1678163258651" alt="">
+            </div>
+            <div class="header5_bottom2">
+                <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_05-2.jpg?t=1678163258665" alt="">
+            </div>
+        </div>
+        <div class="header5_right">
+            <div class="header5_top">
+                <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_06.jpg?t=1678163258684" alt="">
+                <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_07.gif?t=1678163258876" alt="">
+            </div>
+            <div class="header5_bottom">
+                <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_08.jpg?t=1678163258694" alt="">
+                <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_09.jpg?t=1678163258705" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="header6">
+        <div class="header6_left">
+            <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_10-1.jpg?t=1678163258713" alt="">
+        </div>
+        <div class="header6_left">
+            <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_10-2.jpg?t=1678163258722" alt="">
+        </div>
+        <div class="header6_right">
+            <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_10-3.jpg?t=1678163258731" alt="">
+        </div>
+        <div class="header6_right">
+            <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_10-4.jpg?t=1678163258738" alt="">
+        </div>
+    </div>
+    <div class="header7">
+        <div class="header7_top">
+            <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_11.jpg?t=1678163258748" alt="">
+            <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_12.jpg?t=1678163258756" alt="">
+            <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_13.jpg?t=1678163258765" alt="">
+            <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_14.jpg?t=1678163258776" alt="">
+            <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_15.jpg?t=1678163258784" alt="">
+            <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_16.jpg?t=1678163258793" alt="">
+        </div>
+        <div class="header7_bottom">
+            <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_17.jpg?t=1678163258818" alt="">
+            <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_18.jpg?t=1678163258827" alt="">
+            <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_19.jpg?t=1678163258836" alt="">
+            <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_20.jpg?t=1678163258845" alt="">
+            <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_21.jpg?t=1678163258854" alt="">
+            <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_999_02/Area_22.jpg?t=1678163258863" alt="">
+
+        </div>
+    </div>
+    <div class="header8">
+        <div class="header8-left">
+            <div class="header8-top">
+                <h3>限時搶購</h3>
+            </div>
+            <div class="header8-bottom">
+                <div class="header8-box">
+                    <div class="header8-pic">
+                        <img src="https://img2.momoshop.com.tw/goodsimg/0006/246/890/6246890_O.jpg?t=1669120082" alt="">
+                    </div>
+                    <div class="header8-text">
+                        <h4>蜂蜜</h4>
+                        <p>$938</p>
+                    </div>
+                </div>
+                <div class="header8-box">
+                    <div class="header8-pic">
+                        <img src="https://img3.momoshop.com.tw/ecm/img/online/app/limitbuy/20230306/AT0120230306329139.jpg?t=20230308174113" alt="">
+                    </div>
+                    <div class="header8-text">
+                        <h4>搖搖杯</h4>
+                        <p>$999</p>
+                    </div>
+                </div>
+                <div class="header8-box">
+                    <div class="header8-pic">
+                        <img src="https://img3.momoshop.com.tw/goodsimg/0011/073/028/11073028_O.jpg?t=1678330416" alt="">
+                    </div>
+                    <div class="header8-text">
+                        <h4>皮包</h4>
+                        <p>$1238</p>
+                    </div>
+                </div>
+                <div class="header8-box">
+                    <div class="header8-pic">
+                        <img src="https://img4.momoshop.com.tw/goodsimg/0010/325/825/10325825_O.jpg?t=1677792189" alt="">
+                    </div>
+                    <div class="header8-text">
+                        <h4>率動機</h4>
+                        <p>$17800</p>
+                    </div>
+                </div>
+                <div class="header8-box">
+                    <div class="header8-pic">
+                        <img src="https://img3.momoshop.com.tw/goodsimg/0002/004/986/2004986_O.jpg?t=1677786657" alt="">
+                    </div>
+                    <div class="header8-text">
+                        <h4>益生菌</h4>
+                        <p>$999</p>
+                    </div>
+                </div>
+                <div class="header8-box">
+                    <div class="header8-pic">
+                        <img src="https://img4.momoshop.com.tw/goodsimg/0009/393/577/9393577_O.jpg?t=1678286116" alt="">
+                    </div>
+                    <div class="header8-text">
+                        <h4>小紅瓶</h4>
+                        <p>$2880</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header8-right">
+            <div class="header8-righttop">
+                <div class="header8-top1">
+                    <h3>爆殺24h</h3>
+                </div>
+                <div class="header8-bottom1">
+                    <div class="item">
+                        <img src="https://img1.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_253_01/bt_0_253_01_P1_7_e2.jpg?t=1678351572278" alt="">
+                        <img src="https://img3.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_253_01/bt_0_253_01_P1_5_e2.jpg?t=1678343995754" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="https://img3.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_253_01/bt_0_253_01_P1_8_e2.jpg?t=1678291212738" alt="">
+                        <img src="https://img3.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_253_01/bt_0_253_01_P1_4_e2.jpg?t=1678291212738" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="header8-rightbottom">
+                <div class="header8-top3">
+                    <h4>發燒主題</h4>
+                </div>
+                <div class="header8-bottom3">
+                    <img src="https://img1.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_254_01/bt_0_254_01_P1_5_e2.jpg?t=1612860954721" alt="">
+                    <img src="https://img1.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_254_01/bt_0_254_01_P1_7_e2.jpg?t=1616394563127" alt="">
+                    <img src="https://img2.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_254_01/bt_0_254_01_P1_11_e2.jpg?t=1614929564625" alt="">
+                    <img src="https://img3.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_254_01/bt_0_254_01_P1_1_e2.jpg?t=1611195445574" alt="">
+                    <img src="https://img4.momoshop.com.tw/ecm/img/online/10/999/00/000/bt_0_254_01/bt_0_254_01_P1_8_e2.jpg?t=1620648923361" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header9">
+        <div class="header9-left">
+            <div class="header9-box">
+                <div class="header9-pic"></div>
+                <div class="header9-text"></div>
+            </div>
+            <div class="header9-box">
+                <div class="header9-pic"></div>
+                <div class="header9-text"></div>
+            </div>
+        </div>
+        <div class="header9-right">
+            <div class="header9-righttop">
+                <div class="header9-top"></div>
+                <div class="header9-bottom"></div>
+            </div>
+            <div class="header9-bottom"></div>
+        </div>
+    </div>
+</body>
+</html>
